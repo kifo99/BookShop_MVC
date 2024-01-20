@@ -1,9 +1,10 @@
 ﻿@model Category
 
 <form method="post">
+    <input asp-for="CategoryId" hidden />
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Create Category</h2>
+            <h2 class="text-primary">Edit Category</h2>
         </div>
         @* <div asp-validation-summary="All"></div> *@
         <div class="mb-3 row p-1">
@@ -18,19 +19,20 @@
         </div>
         <div class="row">
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-primary form-control"><i class="bi bi-plus-square"></i>  Create</button>
+                <button type="submit" class="btn btn-primary form-control"><i class="bi bi-plus-square"></i> Update</button>
             </div>
             <div class="col-6 col-md-3">
                 <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary border form-control"><i class="bi bi-skip-backward"></i>  Back to List</a>
             </div>
         </div>
-        
-        
+
+
     </div>
 </form>
 
-@section Scripts{
+@section Scripts {
     @{
-        <partial name="_ValidationScriptsPartial"/>
+        <partial name="_ValidationScriptsPartial" />
     }
 }
+
